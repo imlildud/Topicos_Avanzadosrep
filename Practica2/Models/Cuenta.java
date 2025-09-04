@@ -1,10 +1,10 @@
 package Practica2.Models;
 
 public class Cuenta {
-    private String numeroCuenta;
-    private String pin;
+    private final String numeroCuenta;
+    private final String pin;
     private double saldo;
-    private String titular;
+    private final String titular;
     private String destino;
 
     public Cuenta(String numeroCuenta, String pin, double saldoInicial, String titular){

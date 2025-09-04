@@ -3,8 +3,8 @@ import Practica2.Models.CajeroModel;
 import Practica2.Views.CajeroView;
 
 public class CajeroController {
-    private CajeroModel model;
-    private CajeroView view;
+    private final CajeroModel model;
+    private final CajeroView view;
     private boolean sistemaActivo;
 
     public CajeroController(CajeroModel model, CajeroView view){

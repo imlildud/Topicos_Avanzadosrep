@@ -36,7 +36,15 @@ public class CajeroModel {
     }
 
     public boolean retirar (double monto) {
-        return cuentaActual != null && cuentaActual.retirar(monto);
+        if (cuentaActual != null && cuentaActual.getSaldo() >= monto){
+            Map<Integer, Integer> combinacion = GenericoBilletes.generarCombinacion(monto);
+            if (combinacion != null){
+                cuentaActual.retirar(monto);
+                GenericoBilletes.imprimirCombinacion(combinacion);
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean depositar (double monto) {
