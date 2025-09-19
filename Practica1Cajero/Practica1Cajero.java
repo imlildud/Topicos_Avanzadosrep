@@ -1,4 +1,4 @@
-package Practica1;
+package Practica1Cajero;
 import java.util.Scanner;
 import java.util.ArrayList;
 

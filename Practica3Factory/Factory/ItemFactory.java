@@ -1,4 +1,4 @@
-package Pratica3.Factory;
+package Practica3Factory.Factory;
 
 public class ItemFactory {
 

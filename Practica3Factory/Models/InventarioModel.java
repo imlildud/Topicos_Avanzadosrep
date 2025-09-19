@@ -1,4 +1,4 @@
-package Pratica3.Models;
+package Practica3Factory.Models;
 import java.util.ArrayList;
 import java.util.List;
 

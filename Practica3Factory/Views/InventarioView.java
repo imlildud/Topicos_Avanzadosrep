@@ -1,4 +1,4 @@
-package Pratica3.Views;
+package Practica3Factory.Views;
 import java.util.Scanner;
 
 public class InventarioView {

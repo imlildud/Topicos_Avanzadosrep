@@ -1,8 +1,8 @@
-package Pratica3.Controller;
+package Practica3Factory.Controller;
 
-import Pratica3.Models.InventarioModel;
-import Pratica3.Views.InventarioView;
-import Pratica3.Factory.ItemFactory;
+import Practica3Factory.Models.InventarioModel;
+import Practica3Factory.Views.InventarioView;
+import Practica3Factory.Factory.ItemFactory;
 
 public class InventarioController {
     private final InventarioModel<Object> productModel;

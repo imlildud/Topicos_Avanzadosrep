@@ -1,5 +1,5 @@
-package Pratica3;
-import Pratica3.Controller.InventarioController;
+package Practica3Factory;
+import Practica3Factory.Controller.InventarioController;
 
 public class Main {
     public static void main(String[] args) {
