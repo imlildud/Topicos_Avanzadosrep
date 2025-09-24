@@ -1,4 +1,4 @@
-package Practica4.Models;
+package Practica5Builder.Models;
 
 public class Cuenta {
     private final String numeroCuenta;
@@ -6,11 +6,15 @@ public class Cuenta {
     private double saldo;
     private final String titular;
 
-    public Cuenta(String numeroCuenta, String pin, double saldoInicial, String titular) {
+    Cuenta(String numeroCuenta, String pin, double saldoInicial, String titular){
         this.numeroCuenta = numeroCuenta;
         this.pin = pin;
         this.saldo = saldoInicial;
         this.titular = titular;
+    }
+
+    public static CuentaBuilder builder(){
+        return new CuentaBuilder();
     }
 
     public String getNumeroCuenta() {

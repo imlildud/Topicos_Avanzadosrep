@@ -1,5 +1,5 @@
-package Practica4.Models;
-import Practica4.Views.CajeroView;
+package Practica5Builder.Models;
+import Practica4Strategy.Views.CajeroView;
 
 public class DepositarStrategy implements OperacionStrategy {
     @Override

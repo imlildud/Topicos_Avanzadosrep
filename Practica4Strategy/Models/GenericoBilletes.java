@@ -1,4 +1,4 @@
-package Practica4.Models;
+package Practica4Strategy.Models;
 import java.util.*;
 
 public class GenericoBilletes {

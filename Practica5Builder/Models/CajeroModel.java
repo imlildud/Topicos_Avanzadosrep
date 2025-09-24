@@ -1,4 +1,4 @@
-package Practica4.Models;
+package Practica5Builder.Models;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,10 +12,33 @@ public class CajeroModel {
     }
 
     private void inicializarCuentas() {
-        cuentas.put("12345", new Cuenta("12345", "1111", 5000, "Juan Perez"));
-        cuentas.put("23456", new Cuenta("23456", "2222", 8000, "Panchito Perez"));
-        cuentas.put("34567", new Cuenta("34567", "3333", 10000, "Maria Perez"));
-        cuentas.put("45678", new Cuenta("45678", "4444", 10, "Josefa Perez"));
+        cuentas.put("12345", Cuenta.builder()
+                .setNumeroCuenta("12345")
+                .setPin("1111")
+                .setSaldo(5000)
+                .setTitular("Juan Perez")
+                .build());
+
+        cuentas.put("23456", Cuenta.builder()
+                .setNumeroCuenta("23456")
+                .setPin("2222")
+                .setSaldo(8000)
+                .setTitular("Panchito Perez")
+                .build());
+
+        cuentas.put("34567", Cuenta.builder()
+                .setNumeroCuenta("34567")
+                .setPin("3333")
+                .setSaldo(10000)
+                .setTitular("Maria Perez")
+                .build());
+
+        cuentas.put("45678", Cuenta.builder()
+                .setNumeroCuenta("45678")
+                .setPin("4444")
+                .setSaldo(10)
+                .setTitular("Josefa Perez")
+                .build());
     }
 
     public boolean autenticar(String numeroCuenta, String pin) {

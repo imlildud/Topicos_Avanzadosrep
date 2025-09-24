@@ -1,6 +1,6 @@
-package Practica4.Controllers;
-import Practica4.Models.*;
-import Practica4.Views.CajeroView;
+package Practica4Strategy.Controllers;
+import Practica4Strategy.Models.*;
+import Practica4Strategy.Views.CajeroView;
 import java.util.HashMap;
 import java.util.Map;
 
