@@ -7,8 +7,8 @@ import java.sql.*;
 public class Main {
     public static void main(String[] args) {
         String url = "jdbc:mysql://localhost:3306/escuela";
-        String user = "devuser";
-        String pass = "080805";
+        String user = "user";
+        String pass = "password";
 
         try (Connection conn = DriverManager.getConnection(url, user, pass)) {
             EstudianteDAO dao = new EstudianteDAOImpl(conn);
