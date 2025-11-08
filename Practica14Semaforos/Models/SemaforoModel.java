@@ -10,12 +10,14 @@ import java.util.Queue;
 public class SemaforoModel {
     private final int cupo = 16;
     private ArrayList<ProcesoModel> enUso;
+    private ArrayList<ProcesoModel> Liberado;
     private Queue<ProcesoModel> cola;
     private SemaforoView view;
 
     public SemaforoModel(SemaforoView view) {
         this.view = view;
         enUso = new ArrayList<>();
+        Liberado = new ArrayList<>();
         cola = new LinkedList<>();
     }
 
@@ -44,7 +46,8 @@ public class SemaforoModel {
         if (procesoLiberado != null) {
             procesoLiberado.setHoraSalida();
             enUso.remove(procesoLiberado);
-            view.mostrarMensaje("Proceso " + id + " ha salido del semaforo.");
+            Liberado.add(procesoLiberado);
+            view.mostrarMensaje("Proceso " + id + " ha salido del semaforo. a las " + procesoLiberado.getHoraSalida());
 
             if (!cola.isEmpty()) {
                 ProcesoModel siguiente = cola.poll();
@@ -83,6 +86,13 @@ public class SemaforoModel {
                                ", Hora Atencion: " + p.getHoraAtencion() +
                                ", Hora Salida: " + p.getHoraSalida() +
                                ", Tiempo en Cola: " + p.getTiempoCola());
+        }
+        for (ProcesoModel p: Liberado){
+            view.mostrarMensaje("Proceso liberado - ID: " + p.getId() +
+                    ", Hora Llegada: " + p.getHoraLlegada() +
+                    ", Hora Atencion: " + p.getHoraAtencion() +
+                    ", Hora Salida: " + p.getHoraSalida() +
+                    ", Tiempo en Cola: " + p.getTiempoCola());
         }
     }
 }
