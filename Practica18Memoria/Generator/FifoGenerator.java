@@ -28,7 +28,11 @@ public class FifoGenerator {
                     frames[puntero] = pagina;
                     puntero = (puntero + 1) % numMarcos;
                 }
-                fallo = true;
+                if (fallos < numMarcos){
+                    fallo = false;
+                } else{
+                    fallo = true;
+                }
                 fallos++;
             }
             res.getPasos().add(new StepModel(i + 1, pagina, PageReplaceUtils.copia(frames), fallo));

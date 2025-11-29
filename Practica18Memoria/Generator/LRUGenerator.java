@@ -49,7 +49,11 @@ public class LRUGenerator {
                     frames[idxLRU] = pagina;
                     lastUsed[idxLRU] = i;
                 }
-                fallo = true;
+                if (fallos < numMarcos){
+                    fallo = false;
+                } else{
+                    fallo = true;
+                }
                 fallos++;
             }
 

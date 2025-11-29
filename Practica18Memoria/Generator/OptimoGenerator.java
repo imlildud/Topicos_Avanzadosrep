@@ -36,7 +36,11 @@ public class OptimoGenerator {
 
                     frames[indiceReemplazar] = pagina;
                 }
-                fallo = true;
+                if (fallos < numMarcos){
+                    fallo = false;
+                } else{
+                    fallo = true;
+                }
                 fallos++;
             }
 
